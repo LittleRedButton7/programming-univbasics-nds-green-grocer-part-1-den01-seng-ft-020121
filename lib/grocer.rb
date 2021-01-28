@@ -33,6 +33,6 @@ def consolidate_cart(cart)
   end
 end
 
-# want to return an [{}]
+# want to return an [{:item=>, }]
 
   
