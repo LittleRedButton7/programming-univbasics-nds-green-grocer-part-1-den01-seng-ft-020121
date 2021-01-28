@@ -16,10 +16,9 @@ def grocer
   
 
 def find_item_by_name_in_collection(name, collection)
-  collection.each do |name|
-    if [:item] == name
-      puts [:item]
-    end
+  count = 0
+  while count < collection.length
+    do 
   end
 end
 
