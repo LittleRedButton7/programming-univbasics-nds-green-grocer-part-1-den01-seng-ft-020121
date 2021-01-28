@@ -18,8 +18,8 @@ def grocer
 def find_item_by_name_in_collection(name, collection)
   count = 0
   while count < collection.length
-    collection[count]
-      if 
+    if collection[count]
+    
     count += 1
   end
 end
