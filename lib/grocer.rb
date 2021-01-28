@@ -40,6 +40,7 @@ def consolidate_cart(cart)
     end
    count += 1
   end
+  new_cart
 end
 
 # want to return an AoH of items like [{:item=> "AVOCADO", :price => 3.00, :clearance => false, count: 2}]
