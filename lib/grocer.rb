@@ -1,17 +1,48 @@
-def find_item_by_name_in_collection(name, collection)
-  # Implement me first!
-  #
-  # Consult README for inputs and outputs
+require 'pry'
+GROCER = [
+      {:item => "AVOCADO", :price => 3.00, :clearance => true},
+      {:item => "KALE", :price => 3.00, :clearance => false},
+      {:item => "BLACK_BEANS", :price => 2.50, :clearance => false},
+      {:item => "ALMONDS", :price => 9.00, :clearance => false},
+      {:item => "TEMPEH", :price => 3.00, :clearance => true},
+      {:item => "CHEESE", :price => 6.50, :clearance => false},
+      {:item => "BEER", :price => 13.00, :clearance => false},
+      {:item => "PEANUTBUTTER", :price => 3.00, :clearance => true},
+      {:item => "BEETS", :price => 2.50, :clearance => false},
+      {:item => "SOY MILK", :price => 4.50, :clearance => true}
+    ]
+  
 
+def find_item_by_name_in_collection(name, collection)
+  count = 0
+  while count < collection.length
+    if collection[count][:item] == name
+      return collection[count]
+    end
+    count += 1
+  end
 end
 
 def consolidate_cart(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This returns a new Array that represents the cart. Don't merely
-  # change `cart` (i.e. mutate) it. It's easier to return a new thing.
-
+  new_cart = []
+  count = 0
+  while count < cart.length 
+    new_item = find_item_by_name_in_collection(cart[count][:item], new_cart)
+    if new_item != nil
+      new_item[:count] += 1
+    else new_item = {
+      :item => cart[count][:item],
+      :price => cart[count][:price],
+      :clearance => cart[count][:clearance],
+      :count => 1
+      }
+      new_cart << new_item
+    end
+   count += 1
+  end
+  new_cart
 end
 
+# want to return an AoH of items like [{:item=> "AVOCADO", :price => 3.00, :clearance => false, count: 2}]
 
   
