@@ -33,6 +33,6 @@ def consolidate_cart(cart)
   end
 end
 
-# want to return an [{:item=> "AVOCADO", :price => 3.00, :clearance => false, count: 2}]
+# want to return an AoH of items like [{:item=> "AVOCADO", :price => 3.00, :clearance => false, count: 2}]
 
   
