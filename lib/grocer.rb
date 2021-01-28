@@ -1,6 +1,5 @@
 require 'pry'
-def grocer 
-  groceries = [
+GROCER = [
       {:item => "AVOCADO", :price => 3.00, :clearance => true},
       {:item => "KALE", :price => 3.00, :clearance => false},
       {:item => "BLACK_BEANS", :price => 2.50, :clearance => false},
@@ -12,7 +11,6 @@ def grocer
       {:item => "BEETS", :price => 2.50, :clearance => false},
       {:item => "SOY MILK", :price => 4.50, :clearance => true}
     ]
-  end
   
 
 def find_item_by_name_in_collection(name, collection)
